@@ -1,8 +1,7 @@
 # 🌿 Lucky Shrub – SQL `GROUP BY` & `HAVING` Practice
 
 ## 📌 Overview
-This project demonstrates the use of SQL **GROUP BY** and **HAVING** clauses with the fictional **Lucky Shrub** garden design firm database.  
-The objective is to group and filter aggregated data to gain insights from the Orders table.
+This project demonstrates the use of SQL **GROUP BY** and **HAVING** clauses with the fictional **Lucky Shrub** garden design firm database.
 
 ---
 
@@ -21,35 +20,23 @@ The objective is to group and filter aggregated data to gain insights from the O
 
 ## 🎯 Tasks & Solutions
 
-### **Task 1 – Group orders by date**
 ```sql
+-- Task 1 – Group orders by date
 SELECT OrderDate
 FROM Orders
 GROUP BY OrderDate;
-Purpose: Lists each unique order date once.
 
-Task 2 – Count orders per date
-sql
-Zkopírovat
-Upravit
+-- Task 2 – Count orders per date
 SELECT OrderDate, COUNT(OrderDate) AS OrderCount
 FROM Orders
 GROUP BY OrderDate;
-Purpose: Shows how many orders were placed on each date.
 
-Task 3 – Total quantities by department
-sql
-Zkopírovat
-Upravit
+-- Task 3 – Total quantities by department
 SELECT Department, SUM(OrderQty) AS TotalQuantity
 FROM Orders
 GROUP BY Department;
-Purpose: Displays total quantity ordered for each department.
 
-Task 4 – Orders between 1st and 30th June 2022
-sql
-Zkopírovat
-Upravit
+-- Task 4 – Orders between 1st and 30th June 2022
 -- Using WHERE before GROUP BY
 SELECT OrderDate, COUNT(OrderID) AS OrdersCount
 FROM Orders
@@ -61,3 +48,13 @@ SELECT OrderDate, COUNT(OrderID) AS OrdersCount
 FROM Orders
 GROUP BY OrderDate
 HAVING OrderDate BETWEEN '2022-06-01' AND '2022-06-30';
+🗂 Schema Diagram
++-----------------------------+
+|          Orders             |
++-----------------------------+
+| OrderID (PK)                |
+| Department                  |
+| OrderDate                   |
+| OrderQty                    |
+| OrderTotal                  |
++-----------------------------+
