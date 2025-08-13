@@ -14,7 +14,6 @@ This project demonstrates the use of SQL **GROUP BY** and **HAVING** clauses wit
 | 3       | Compost & Stones  | 2022-05-27 | 20       | 780        |
 | 4       | Trees & Shrubs    | 2022-06-01 | 15       | 400        |
 | 5       | Garden Decor      | 2022-06-10 | 2        | 1250       |
-| ...     | ...               | ...        | ...      | ...        |
 
 ---
 
