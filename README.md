@@ -47,6 +47,8 @@ SELECT OrderDate, COUNT(OrderID) AS OrdersCount
 FROM Orders
 GROUP BY OrderDate
 HAVING OrderDate BETWEEN '2022-06-01' AND '2022-06-30';
+
+
 🗂 Schema Diagram
 +-----------------------------+
 |          Orders             |
